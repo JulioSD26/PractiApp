@@ -8,6 +8,8 @@ import { NavigationContainer} from "@react-navigation/native"
 import Login from './screens/Login';
 import Home from './screens/Home';
 import WelcomeScreen from './screens/Welcome';
+import OlvidePassword from './screens/OlvidePassword';
+import Registrarse from './screens/Registrarse';
 
 export default function App() {
 
@@ -19,6 +21,8 @@ export default function App() {
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="OlvidePassword" component={OlvidePassword} />
+        <Stack.Screen name="Registrarse" component={Registrarse} />
       </Stack.Navigator>
     );
   }

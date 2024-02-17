@@ -24,6 +24,13 @@ export default function Login(props) {
         }
     }
 
+    const OlvidePassword = () => {
+        props.navigation.navigate('OlvidePassword')
+    }
+    const Registrarse = () => {
+        props.navigation.navigate('Registrarse')
+    }
+
 
     return (
         <View style={styles.padre}>
@@ -47,11 +54,18 @@ export default function Login(props) {
                         <Text style={styles.textoBoton}>Sign In</Text>
                     </TouchableOpacity>
                 </View>
-                <View>
-                    <Text>¿Olvidaste la contraseña?</Text>
+                <View style={{alignItems:'center'}}>
+                    <TouchableOpacity onPress={OlvidePassword}>
+                        <Text style={{color:'orange', textDecorationLine: 'underline'}}>¿Olvidaste la contraseña?</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
-            <Text>¿No tienes cuenta? Registrate</Text>
+            <View style={styles.RegistrarseContenedor}>
+                <Text style={styles.textResgistrarse}>¿No tienes cuenta?</Text>
+                <TouchableOpacity onPress={Registrarse}>
+                    <Text style={styles.textRegistrarse1}>Registrate</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
@@ -104,5 +118,17 @@ const styles = StyleSheet.create({
     textoBoton:{
         textAlign:'center',
         color:'white'
+    },
+    RegistrarseContenedor:{
+        flexDirection: 'row', // Establece la dirección del contenedor como fila
+        alignItems: 'center', // Alinea los elementos verticalmente en el centro
+        justifyContent: 'center', // Alinea los elementos horizontalmente en el centro (puedes ajustar esto según sea necesario)
+    },
+    textResgistrarse: {
+        fontSize: 16,
+        marginHorizontal: 3, // Añade un margen horizontal entre los elementos de texto
+    },
+    textRegistrarse1:{
+        color:'orange'
     }
 })
