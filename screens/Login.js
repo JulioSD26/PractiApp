@@ -26,7 +26,6 @@ export default function Login(props) {
 
 
     return (
-
         <View style={styles.padre}>
             <View>
                 <Text>Iniciar Sesión</Text>
@@ -48,11 +47,11 @@ export default function Login(props) {
                         <Text style={styles.textoBoton}>Sign In</Text>
                     </TouchableOpacity>
                 </View>
-
                 <View>
                     <Text>¿Olvidaste la contraseña?</Text>
                 </View>
             </View>
+            <Text>¿No tienes cuenta? Registrate</Text>
         </View>
     )
 }
